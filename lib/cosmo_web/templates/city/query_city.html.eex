@@ -1,0 +1,29 @@
+<h1>Query Cities</h1>
+
+<span><%= link "List", to: Routes.city_path(@conn, :index) %></span>
+
+<p/>
+<table>
+    <thead>
+     <tr>
+      <th>City</th>
+      <th>Name</th>
+      <th>Population</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+    </tr>
+   </thead>
+   <%= if assigns[:cities] do %>
+   <tbody>
+    <%= for city <- @cities do %>
+    <tr>
+      <td><%= link city.id, to: Routes.city_path(@conn, :show, city) %></td>
+      <td><%= city.nam %></td>
+      <td><%= Number.Delimit.number_to_delimited(city.pop) %></td>
+      <td><%= city.lat %></td>
+      <td><%= city.lon %></td>
+    </tr>
+    <%= end %>
+  </tbody>
+  <%= end %>
+  </table>

@@ -1,0 +1,240 @@
+<h1>Show Property</h1>
+
+<span><%= link "Edit", to: Routes.property_path(@conn, :edit, @property) %></span>
+|
+<span><%= link "List", to: Routes.property_path(@conn, :index) %></span>
+
+<p/>
+<ul>
+
+  <li>
+    <strong>Bbl:</strong>
+    <%= @property.bbl %>
+  </li>
+
+  <li>
+    <strong>Bin:</strong>
+    <%= @property.bin %>
+  </li>
+
+  <li>
+    <strong>Borough:</strong>
+    <%= @property.borough %>
+  </li>
+
+  <li>
+    <strong>Census tract:</strong>
+    <%= @property.census_tract %>
+  </li>
+
+  <li>
+    <strong>Community board:</strong>
+    <%= @property.community_board %>
+  </li>
+
+  <li>
+    <strong>Comparable rental 1 address:</strong>
+    <%= @property.comparable_rental_1_address %>
+  </li>
+
+  <li>
+    <strong>Comparable rental 1 boro block lot:</strong>
+    <%= @property.comparable_rental_1_boro_block_lot %>
+  </li>
+
+  <li>
+    <strong>Comparable rental 1 building classification:</strong>
+    <%= @property.comparable_rental_1_building_classification %>
+  </li>
+
+  <li>
+    <strong>Comparable rental 1 dist from coop in miles:</strong>
+    <%= @property.comparable_rental_1_dist_from_coop_in_miles %>
+  </li>
+
+  <li>
+    <strong>Comparable rental 1 est gross income:</strong>
+    <%= @property.comparable_rental_1_est_gross_income %>
+  </li>
+
+  <li>
+    <strong>Comparable rental 1 full market value:</strong>
+    <%= @property.comparable_rental_1_full_market_value %>
+  </li>
+
+  <li>
+    <strong>Comparable rental 1 gross income per sqft:</strong>
+    <%= @property.comparable_rental_1_gross_income_per_sqft %>
+  </li>
+
+  <li>
+    <strong>Comparable rental 1 gross sqft:</strong>
+    <%= @property.comparable_rental_1_gross_sqft %>
+  </li>
+
+  <li>
+    <strong>Comparable rental 1 market value per sqft:</strong>
+    <%= @property.comparable_rental_1_market_value_per_sqft %>
+  </li>
+
+  <li>
+    <strong>Comparable rental 1 neighborhood:</strong>
+    <%= @property.comparable_rental_1_neighborhood %>
+  </li>
+
+  <li>
+    <strong>Comparable rental 1 total units:</strong>
+    <%= @property.comparable_rental_1_total_units %>
+  </li>
+
+  <li>
+    <strong>Comparable rental 1 year built:</strong>
+    <%= @property.comparable_rental_1_year_built %>
+  </li>
+
+  <li>
+    <strong>Comparable rental 2 address:</strong>
+    <%= @property.comparable_rental_2_address %>
+  </li>
+
+  <li>
+    <strong>Comparable rental 2 boro block lot:</strong>
+    <%= @property.comparable_rental_2_boro_block_lot %>
+  </li>
+
+  <li>
+    <strong>Comparable rental 2 building classification:</strong>
+    <%= @property.comparable_rental_2_building_classification %>
+  </li>
+
+  <li>
+    <strong>Comparable rental 2 dist from coop in miles:</strong>
+    <%= @property.comparable_rental_2_dist_from_coop_in_miles %>
+  </li>
+
+  <li>
+    <strong>Comparable rental 2 est gross income:</strong>
+    <%= @property.comparable_rental_2_est_gross_income %>
+  </li>
+
+  <li>
+    <strong>Comparable rental 2 full market value:</strong>
+    <%= @property.comparable_rental_2_full_market_value %>
+  </li>
+
+  <li>
+    <strong>Comparable rental 2 gross income per sqft:</strong>
+    <%= @property.comparable_rental_2_gross_income_per_sqft %>
+  </li>
+
+  <li>
+    <strong>Comparable rental 2 gross sqft:</strong>
+    <%= @property.comparable_rental_2_gross_sqft %>
+  </li>
+
+  <li>
+    <strong>Comparable rental 2 market value per sqft:</strong>
+    <%= @property.comparable_rental_2_market_value_per_sqft %>
+  </li>
+
+  <li>
+    <strong>Comparable rental 2 neighborhood:</strong>
+    <%= @property.comparable_rental_2_neighborhood %>
+  </li>
+
+  <li>
+    <strong>Comparable rental 2 total units:</strong>
+    <%= @property.comparable_rental_2_total_units %>
+  </li>
+
+  <li>
+    <strong>Comparable rental 2 year built:</strong>
+    <%= @property.comparable_rental_2_year_built %>
+  </li>
+
+  <li>
+    <strong>Council district:</strong>
+    <%= @property.council_district %>
+  </li>
+
+  <li>
+    <strong>Latitude:</strong>
+    <%= @property.latitude %>
+  </li>
+
+  <li>
+    <strong>Longitude:</strong>
+    <%= @property.longitude %>
+  </li>
+
+  <li>
+    <strong>Manhattan condominium property address:</strong>
+    <%= @property.manhattan_condominium_property_address %>
+  </li>
+
+  <li>
+    <strong>Manhattan condominium property boro block lot:</strong>
+    <%= @property.manhattan_condominium_property_boro_block_lot %>
+  </li>
+
+  <li>
+    <strong>Manhattan condominium property building classification:</strong>
+    <%= @property.manhattan_condominium_property_building_classification %>
+  </li>
+
+  <li>
+    <strong>Manhattan condominium property condo section:</strong>
+    <%= @property.manhattan_condominium_property_condo_section %>
+  </li>
+
+  <li>
+    <strong>Manhattan condominium property est gross income:</strong>
+    <%= @property.manhattan_condominium_property_est_gross_income %>
+  </li>
+
+  <li>
+    <strong>Manhattan condominium property full market value:</strong>
+    <%= @property.manhattan_condominium_property_full_market_value %>
+  </li>
+
+  <li>
+    <strong>Manhattan condominium property gross income per sqft:</strong>
+    <%= @property.manhattan_condominium_property_gross_income_per_sqft %>
+  </li>
+
+  <li>
+    <strong>Manhattan condominium property gross sqft:</strong>
+    <%= @property.manhattan_condominium_property_gross_sqft %>
+  </li>
+
+  <li>
+    <strong>Manhattan condominium property market value per sqft:</strong>
+    <%= @property.manhattan_condominium_property_market_value_per_sqft %>
+  </li>
+
+  <li>
+    <strong>Manhattan condominium property neighborhood:</strong>
+    <%= @property.manhattan_condominium_property_neighborhood %>
+  </li>
+
+  <li>
+    <strong>Manhattan condominium property total units:</strong>
+    <%= @property.manhattan_condominium_property_total_units %>
+  </li>
+
+  <li>
+    <strong>Manhattan condominium property year built:</strong>
+    <%= @property.manhattan_condominium_property_year_built %>
+  </li>
+
+  <li>
+    <strong>Nta:</strong>
+    <%= @property.nta %>
+  </li>
+
+  <li>
+    <strong>Postcode:</strong>
+    <%= @property.postcode %>
+  </li>
+
+</ul>

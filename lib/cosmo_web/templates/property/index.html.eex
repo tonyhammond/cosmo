@@ -1,0 +1,123 @@
+<h1>List Properties</h1>
+
+<span><b><%= link "Home", to: Routes.page_path(@conn, :index) %></b></span>
+|
+<span><%= link "New", to: Routes.property_path(@conn, :new) %></span>
+|
+<span><%= link "Query", to: Routes.property_path(@conn, :query) %></span>
+
+<p/>
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Bbl</th>
+      <th>Bin</th>
+      <th>Borough</th>
+      <th>Census tract</th>
+      <th>Community board</th>
+      <th>Comparable rental 1 address</th>
+      <th>Comparable rental 1 boro block lot</th>
+      <th>Comparable rental 1 building classification</th>
+      <th>Comparable rental 1 dist from coop in miles</th>
+      <th>Comparable rental 1 est gross income</th>
+      <th>Comparable rental 1 full market value</th>
+      <th>Comparable rental 1 gross income per sqft</th>
+      <th>Comparable rental 1 gross sqft</th>
+      <th>Comparable rental 1 market value per sqft</th>
+      <th>Comparable rental 1 neighborhood</th>
+      <th>Comparable rental 1 total units</th>
+      <th>Comparable rental 1 year built</th>
+      <th>Comparable rental 2 address</th>
+      <th>Comparable rental 2 boro block lot</th>
+      <th>Comparable rental 2 building classification</th>
+      <th>Comparable rental 2 dist from coop in miles</th>
+      <th>Comparable rental 2 est gross income</th>
+      <th>Comparable rental 2 full market value</th>
+      <th>Comparable rental 2 gross income per sqft</th>
+      <th>Comparable rental 2 gross sqft</th>
+      <th>Comparable rental 2 market value per sqft</th>
+      <th>Comparable rental 2 neighborhood</th>
+      <th>Comparable rental 2 total units</th>
+      <th>Comparable rental 2 year built</th>
+      <th>Council district</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Manhattan condominium property address</th>
+      <th>Manhattan condominium property boro block lot</th>
+      <th>Manhattan condominium property building classification</th>
+      <th>Manhattan condominium property condo section</th>
+      <th>Manhattan condominium property est gross income</th>
+      <th>Manhattan condominium property full market value</th>
+      <th>Manhattan condominium property gross income per sqft</th>
+      <th>Manhattan condominium property gross sqft</th>
+      <th>Manhattan condominium property market value per sqft</th>
+      <th>Manhattan condominium property neighborhood</th>
+      <th>Manhattan condominium property total units</th>
+      <th>Manhattan condominium property year built</th>
+      <th>Nta</th>
+      <th>Postcode</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for property <- @properties do %>
+    <tr>
+      <td>  <%= link property.id, to: Routes.property_path(@conn, :show, property) %></td>
+      <td><%= property.bbl %></td>
+      <td><%= property.bin %></td>
+      <td><%= property.borough %></td>
+      <td><%= property.census_tract %></td>
+      <td><%= property.community_board %></td>
+      <td><%= property.comparable_rental_1_address %></td>
+      <td><%= property.comparable_rental_1_boro_block_lot %></td>
+      <td><%= property.comparable_rental_1_building_classification %></td>
+      <td><%= property.comparable_rental_1_dist_from_coop_in_miles %></td>
+      <td><%= property.comparable_rental_1_est_gross_income %></td>
+      <td><%= property.comparable_rental_1_full_market_value %></td>
+      <td><%= property.comparable_rental_1_gross_income_per_sqft %></td>
+      <td><%= property.comparable_rental_1_gross_sqft %></td>
+      <td><%= property.comparable_rental_1_market_value_per_sqft %></td>
+      <td><%= property.comparable_rental_1_neighborhood %></td>
+      <td><%= property.comparable_rental_1_total_units %></td>
+      <td><%= property.comparable_rental_1_year_built %></td>
+      <td><%= property.comparable_rental_2_address %></td>
+      <td><%= property.comparable_rental_2_boro_block_lot %></td>
+      <td><%= property.comparable_rental_2_building_classification %></td>
+      <td><%= property.comparable_rental_2_dist_from_coop_in_miles %></td>
+      <td><%= property.comparable_rental_2_est_gross_income %></td>
+      <td><%= property.comparable_rental_2_full_market_value %></td>
+      <td><%= property.comparable_rental_2_gross_income_per_sqft %></td>
+      <td><%= property.comparable_rental_2_gross_sqft %></td>
+      <td><%= property.comparable_rental_2_market_value_per_sqft %></td>
+      <td><%= property.comparable_rental_2_neighborhood %></td>
+      <td><%= property.comparable_rental_2_total_units %></td>
+      <td><%= property.comparable_rental_2_year_built %></td>
+      <td><%= property.council_district %></td>
+      <td><%= property.latitude %></td>
+      <td><%= property.longitude %></td>
+      <td><%= property.manhattan_condominium_property_address %></td>
+      <td><%= property.manhattan_condominium_property_boro_block_lot %></td>
+      <td><%= property.manhattan_condominium_property_building_classification %></td>
+      <td><%= property.manhattan_condominium_property_condo_section %></td>
+      <td><%= property.manhattan_condominium_property_est_gross_income %></td>
+      <td><%= property.manhattan_condominium_property_full_market_value %></td>
+      <td><%= property.manhattan_condominium_property_gross_income_per_sqft %></td>
+      <td><%= property.manhattan_condominium_property_gross_sqft %></td>
+      <td><%= property.manhattan_condominium_property_market_value_per_sqft %></td>
+      <td><%= property.manhattan_condominium_property_neighborhood %></td>
+      <td><%= property.manhattan_condominium_property_total_units %></td>
+      <td><%= property.manhattan_condominium_property_year_built %></td>
+      <td><%= property.nta %></td>
+      <td><%= property.postcode %></td>
+
+      <td>
+        <%= link "Edit", to: Routes.property_path(@conn, :edit, property) %>
+        |
+        <%= link "Delete", to: Routes.property_path(@conn, :delete, property), method: :delete, data: [confirm: "Are you sure?"] %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>

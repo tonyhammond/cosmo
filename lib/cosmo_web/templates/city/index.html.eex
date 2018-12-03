@@ -1,0 +1,40 @@
+<h1>List Cities</h1>
+
+<span><b><%= link "Home", to: Routes.page_path(@conn, :index) %></b></span>
+|
+<span><%= link "New", to: Routes.city_path(@conn, :new) %></span>
+|
+<span><%= link "Query", to: Routes.city_path(@conn, :query) %></span>
+
+<p/>
+<table>
+  <thead>
+    <tr>
+      <th>City</th>
+      <th>Name</th>
+      <th>Population</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for city <- @cities do %>
+    <tr>
+      <td>  <%= link city.id, to: Routes.city_path(@conn, :show, city) %></td>
+      <td><%= city.nam %></td>
+      <td><%= Number.Delimit.number_to_delimited(city.pop) %></td>
+      <td><%= city.lat %></td>
+      <td><%= city.lon %></td>
+
+      <td>
+
+        <%= link "Edit", to: Routes.city_path(@conn, :edit, city) %>
+        |
+        <%= link "Delete", to: Routes.city_path(@conn, :delete, city), method: :delete, data: [confirm: "Are you sure?"] %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>

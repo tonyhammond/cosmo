@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Cosmo · Cities</title>
+    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+  </head>
+  <body>
+    <header>
+      <section class="container">
+        <a href="">
+          <img src="<%= Routes.static_path(@conn,
+                          "/images/aerial-urban-skyline-black-white-82952601.jpg") %>"
+            alt="Aerial Urban Skyline In Black And White Free Public Domain Cc0 Image"
+            height=200 width=800/>
+        </a>
+      </section>
+    </header>
+    <main role="main" class="container">
+      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+      <%= render @view_module, @view_template, assigns %>
+      <%= if debug do %>
+      <p>DEBUG</p>
+      <p>dbg&gt; <%= @controller_module %></p>
+      <p>dbg&gt; <%= @view_module %></p>
+      <p>dbg&gt; <%= @view_template %></p>
+      <%= end %>
+    </main>
+    <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+</html>

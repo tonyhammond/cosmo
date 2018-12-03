@@ -1,0 +1,195 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <%= label f, :bbl %>
+  <%= number_input f, :bbl %>
+  <%= error_tag f, :bbl %>
+
+  <%= label f, :bin %>
+  <%= number_input f, :bin %>
+  <%= error_tag f, :bin %>
+
+  <%= label f, :borough %>
+  <%= number_input f, :borough %>
+  <%= error_tag f, :borough %>
+
+  <%= label f, :census_tract %>
+  <%= number_input f, :census_tract %>
+  <%= error_tag f, :census_tract %>
+
+  <%= label f, :community_board %>
+  <%= number_input f, :community_board %>
+  <%= error_tag f, :community_board %>
+
+  <%= label f, :comparable_rental_1_address %>
+  <%= text_input f, :comparable_rental_1_address %>
+  <%= error_tag f, :comparable_rental_1_address %>
+
+  <%= label f, :comparable_rental_1_boro_block_lot %>
+  <%= text_input f, :comparable_rental_1_boro_block_lot %>
+  <%= error_tag f, :comparable_rental_1_boro_block_lot %>
+
+  <%= label f, :comparable_rental_1_building_classification %>
+  <%= text_input f, :comparable_rental_1_building_classification %>
+  <%= error_tag f, :comparable_rental_1_building_classification %>
+
+  <%= label f, :comparable_rental_1_dist_from_coop_in_miles %>
+  <%= number_input f, :comparable_rental_1_dist_from_coop_in_miles, step: "any" %>
+  <%= error_tag f, :comparable_rental_1_dist_from_coop_in_miles %>
+
+  <%= label f, :comparable_rental_1_est_gross_income %>
+  <%= number_input f, :comparable_rental_1_est_gross_income %>
+  <%= error_tag f, :comparable_rental_1_est_gross_income %>
+
+  <%= label f, :comparable_rental_1_full_market_value %>
+  <%= number_input f, :comparable_rental_1_full_market_value %>
+  <%= error_tag f, :comparable_rental_1_full_market_value %>
+
+  <%= label f, :comparable_rental_1_gross_income_per_sqft %>
+  <%= number_input f, :comparable_rental_1_gross_income_per_sqft, step: "any" %>
+  <%= error_tag f, :comparable_rental_1_gross_income_per_sqft %>
+
+  <%= label f, :comparable_rental_1_gross_sqft %>
+  <%= number_input f, :comparable_rental_1_gross_sqft %>
+  <%= error_tag f, :comparable_rental_1_gross_sqft %>
+
+  <%= label f, :comparable_rental_1_market_value_per_sqft %>
+  <%= number_input f, :comparable_rental_1_market_value_per_sqft, step: "any" %>
+  <%= error_tag f, :comparable_rental_1_market_value_per_sqft %>
+
+  <%= label f, :comparable_rental_1_neighborhood %>
+  <%= text_input f, :comparable_rental_1_neighborhood %>
+  <%= error_tag f, :comparable_rental_1_neighborhood %>
+
+  <%= label f, :comparable_rental_1_total_units %>
+  <%= number_input f, :comparable_rental_1_total_units %>
+  <%= error_tag f, :comparable_rental_1_total_units %>
+
+  <%= label f, :comparable_rental_1_year_built %>
+  <%= number_input f, :comparable_rental_1_year_built %>
+  <%= error_tag f, :comparable_rental_1_year_built %>
+
+  <%= label f, :comparable_rental_2_address %>
+  <%= text_input f, :comparable_rental_2_address %>
+  <%= error_tag f, :comparable_rental_2_address %>
+
+  <%= label f, :comparable_rental_2_boro_block_lot %>
+  <%= text_input f, :comparable_rental_2_boro_block_lot %>
+  <%= error_tag f, :comparable_rental_2_boro_block_lot %>
+
+  <%= label f, :comparable_rental_2_building_classification %>
+  <%= text_input f, :comparable_rental_2_building_classification %>
+  <%= error_tag f, :comparable_rental_2_building_classification %>
+
+  <%= label f, :comparable_rental_2_dist_from_coop_in_miles %>
+  <%= number_input f, :comparable_rental_2_dist_from_coop_in_miles, step: "any" %>
+  <%= error_tag f, :comparable_rental_2_dist_from_coop_in_miles %>
+
+  <%= label f, :comparable_rental_2_est_gross_income %>
+  <%= number_input f, :comparable_rental_2_est_gross_income %>
+  <%= error_tag f, :comparable_rental_2_est_gross_income %>
+
+  <%= label f, :comparable_rental_2_full_market_value %>
+  <%= number_input f, :comparable_rental_2_full_market_value %>
+  <%= error_tag f, :comparable_rental_2_full_market_value %>
+
+  <%= label f, :comparable_rental_2_gross_income_per_sqft %>
+  <%= number_input f, :comparable_rental_2_gross_income_per_sqft, step: "any" %>
+  <%= error_tag f, :comparable_rental_2_gross_income_per_sqft %>
+
+  <%= label f, :comparable_rental_2_gross_sqft %>
+  <%= number_input f, :comparable_rental_2_gross_sqft %>
+  <%= error_tag f, :comparable_rental_2_gross_sqft %>
+
+  <%= label f, :comparable_rental_2_market_value_per_sqft %>
+  <%= number_input f, :comparable_rental_2_market_value_per_sqft, step: "any" %>
+  <%= error_tag f, :comparable_rental_2_market_value_per_sqft %>
+
+  <%= label f, :comparable_rental_2_neighborhood %>
+  <%= text_input f, :comparable_rental_2_neighborhood %>
+  <%= error_tag f, :comparable_rental_2_neighborhood %>
+
+  <%= label f, :comparable_rental_2_total_units %>
+  <%= number_input f, :comparable_rental_2_total_units %>
+  <%= error_tag f, :comparable_rental_2_total_units %>
+
+  <%= label f, :comparable_rental_2_year_built %>
+  <%= number_input f, :comparable_rental_2_year_built %>
+  <%= error_tag f, :comparable_rental_2_year_built %>
+
+  <%= label f, :council_district %>
+  <%= number_input f, :council_district %>
+  <%= error_tag f, :council_district %>
+
+  <%= label f, :latitude %>
+  <%= number_input f, :latitude, step: "any" %>
+  <%= error_tag f, :latitude %>
+
+  <%= label f, :longitude %>
+  <%= number_input f, :longitude, step: "any" %>
+  <%= error_tag f, :longitude %>
+
+  <%= label f, :manhattan_condominium_property_address %>
+  <%= text_input f, :manhattan_condominium_property_address %>
+  <%= error_tag f, :manhattan_condominium_property_address %>
+
+  <%= label f, :manhattan_condominium_property_boro_block_lot %>
+  <%= text_input f, :manhattan_condominium_property_boro_block_lot %>
+  <%= error_tag f, :manhattan_condominium_property_boro_block_lot %>
+
+  <%= label f, :manhattan_condominium_property_building_classification %>
+  <%= text_input f, :manhattan_condominium_property_building_classification %>
+  <%= error_tag f, :manhattan_condominium_property_building_classification %>
+
+  <%= label f, :manhattan_condominium_property_condo_section %>
+  <%= text_input f, :manhattan_condominium_property_condo_section %>
+  <%= error_tag f, :manhattan_condominium_property_condo_section %>
+
+  <%= label f, :manhattan_condominium_property_est_gross_income %>
+  <%= number_input f, :manhattan_condominium_property_est_gross_income %>
+  <%= error_tag f, :manhattan_condominium_property_est_gross_income %>
+
+  <%= label f, :manhattan_condominium_property_full_market_value %>
+  <%= number_input f, :manhattan_condominium_property_full_market_value %>
+  <%= error_tag f, :manhattan_condominium_property_full_market_value %>
+
+  <%= label f, :manhattan_condominium_property_gross_income_per_sqft %>
+  <%= number_input f, :manhattan_condominium_property_gross_income_per_sqft, step: "any" %>
+  <%= error_tag f, :manhattan_condominium_property_gross_income_per_sqft %>
+
+  <%= label f, :manhattan_condominium_property_gross_sqft %>
+  <%= number_input f, :manhattan_condominium_property_gross_sqft %>
+  <%= error_tag f, :manhattan_condominium_property_gross_sqft %>
+
+  <%= label f, :manhattan_condominium_property_market_value_per_sqft %>
+  <%= number_input f, :manhattan_condominium_property_market_value_per_sqft, step: "any" %>
+  <%= error_tag f, :manhattan_condominium_property_market_value_per_sqft %>
+
+  <%= label f, :manhattan_condominium_property_neighborhood %>
+  <%= text_input f, :manhattan_condominium_property_neighborhood %>
+  <%= error_tag f, :manhattan_condominium_property_neighborhood %>
+
+  <%= label f, :manhattan_condominium_property_total_units %>
+  <%= number_input f, :manhattan_condominium_property_total_units %>
+  <%= error_tag f, :manhattan_condominium_property_total_units %>
+
+  <%= label f, :manhattan_condominium_property_year_built %>
+  <%= number_input f, :manhattan_condominium_property_year_built %>
+  <%= error_tag f, :manhattan_condominium_property_year_built %>
+
+  <%= label f, :nta %>
+  <%= text_input f, :nta %>
+  <%= error_tag f, :nta %>
+
+  <%= label f, :postcode %>
+  <%= number_input f, :postcode %>
+  <%= error_tag f, :postcode %>
+
+  <div>
+    <%= submit "Save" %>
+  </div>
+<% end %>

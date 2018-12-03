@@ -1,0 +1,31 @@
+defmodule Cosmo.Graphql.City do
+    use Absinthe.Schema
+
+    alias CosmoWeb.Resolvers.CityResolver
+
+    object :city do
+      field :id, non_null(:id)
+      field :lat, non_null(:float)
+      field :lon, non_null(:float)
+      field :nam, non_null(:string)
+      field :pop, non_null(:integer)
+      end
+
+    query do
+      field :cities, non_null(list_of(non_null(:city))) do
+        resolve &CityResolver.cities/3
+      end
+    end
+
+    mutation do
+      field :create_city, :city do
+        arg :lat, non_null(:float)
+        arg :lon, non_null(:float)
+        arg :nam, non_null(:string)
+        arg :pop, non_null(:integer)
+
+        resolve &CityResolver.create_city/3
+      end
+    end
+
+  end

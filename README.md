@@ -4,5 +4,5 @@
 
 ![graphiql_list_cities.png](./priv/static/images/graphiql_list_cities.png)
 
-![graphiql_create_city.png](./priv/static/images/graphiql_list_cities.png)
+![graphiql_create_city.png](./priv/static/images/graphiql_create_city.png)
 

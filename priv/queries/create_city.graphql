@@ -1,0 +1,9 @@
+mutation {
+  createCity(nam: "Test", pop: 123, lat: 0.0, lon: 0.0) {
+    id
+    nam
+    pop
+    lat
+    lon
+  }
+}

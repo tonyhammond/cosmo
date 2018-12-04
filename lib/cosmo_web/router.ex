@@ -43,7 +43,7 @@ defmodule CosmoWeb.Router do
 
    forward "/graphiql", Absinthe.Plug.GraphiQL,
      schema: Cosmo.Graphql.City,
-     interface: :simple,
+     # interface: :simple,
      context: %{pubsub: Cosmo.Endpoint}
 
 end

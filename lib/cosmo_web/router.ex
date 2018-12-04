@@ -26,13 +26,24 @@ defmodule CosmoWeb.Router do
     resources "/properties", PropertyController
   end
 
-  forward "/graphiql", Absinthe.Plug.GraphiQL,
-    schema: Cosmo.Graphql.City,
-    interface: :simple,
-    context: %{pubsub: Cosmo.Endpoint}
+  pipeline :api do
+    plug :accepts, ["json"]
+  end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", CosmoWeb do
-  #   pipe_through :api
-  # end
+   scope "/api" do
+     pipe_through :api
+
+     # forward "/graphiql", Absinthe.Plug.GraphiQL,
+     #   schema: Cosmo.Graphql.City
+
+     forward "/", Absinthe.Plug,
+       schema: Cosmo.Graphql.City
+
+   end
+
+   forward "/graphiql", Absinthe.Plug.GraphiQL,
+     schema: Cosmo.Graphql.City,
+     interface: :simple,
+     context: %{pubsub: Cosmo.Endpoint}
+
 end

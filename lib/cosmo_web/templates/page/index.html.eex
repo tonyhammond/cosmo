@@ -2,5 +2,7 @@
   <h1><%= gettext "Welcome to %{name}!", name: "Cosmo" %></h1>
   <p>A demo project to explore Elixir Phoenix<br/>using a couple of separate unrelated datasets:<br/><span><%= link "Cities", to: Routes.city_path(@conn, :index) %></span> and <span><%= link "Properties", to: Routes.property_path(@conn, :index) %></span></p>
   <br/>
-  <p>See <a href="./help">/help</a> for the endpoints available:</p>
+  <p>See <a href="./graphiql">/graphiql</a> for GraphiQL endpoint.</p>
+  <br/>
+  <p>See <a href="./help">/help</a> for all endpoints available.</p>
 </section>

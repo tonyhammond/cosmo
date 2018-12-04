@@ -1,0 +1,9 @@
+{
+  cities {
+    id
+    nam
+    pop
+    lat
+    lon
+  }
+}

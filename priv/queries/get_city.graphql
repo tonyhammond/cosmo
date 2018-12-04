@@ -1,0 +1,9 @@
+{
+  city(id: 78) {
+    id
+    nam
+    pop
+    lat
+    lon
+  }
+}

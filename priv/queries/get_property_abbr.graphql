@@ -1,0 +1,29 @@
+{
+  property(id: 78) {
+    id
+    #
+    bbl
+    bin
+    borough
+    census_tract
+    community_board
+    council_district
+    latitude
+    longitude
+    nta
+    postcode
+    #
+    manhattan_condominium_property_address
+    manhattan_condominium_property_boro_block_lot
+    manhattan_condominium_property_building_classification
+    manhattan_condominium_property_condo_section
+    manhattan_condominium_property_est_gross_income
+    manhattan_condominium_property_full_market_value
+    manhattan_condominium_property_gross_income_per_sqft
+    manhattan_condominium_property_gross_sqft
+    manhattan_condominium_property_market_value_per_sqft
+    manhattan_condominium_property_neighborhood
+    manhattan_condominium_property_total_units
+    manhattan_condominium_property_year_built
+   }
+}

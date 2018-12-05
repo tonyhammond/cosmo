@@ -21,3 +21,15 @@ These are exposed through a number of different interfaces:
 
 ## Mutation: Create city
 ![graphiql_create_city.png](./priv/static/images/graphiql_create_city.png)
+
+## Query: List properties
+![graphiql_list_properties.png](./priv/static/images/graphiql_list_properties.png)
+
+## Query: List properties (abbr.)
+![graphiql_list_properties_abbr.png](./priv/static/images/graphiql_list_properties_abbr.png)
+
+## Query: Get property
+![graphiql_get_property.png](./priv/static/images/graphiql_get_property.png)
+
+## Query: Get property (abbr.)
+![graphiql_get_property_abbr.png](./priv/static/images/graphiql_get_property_abbr.png)

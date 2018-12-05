@@ -2,7 +2,7 @@ defmodule CosmoWeb.CityController do
   use CosmoWeb, :controller
 
   alias Cosmo.Datasets
-  alias Cosmo.Datasets.City
+  alias Cosmo.Datasets.Schemas.City
   alias Cosmo.Query
 
   import CosmoWeb.Plugs.Controller

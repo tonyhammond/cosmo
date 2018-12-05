@@ -2,7 +2,7 @@ defmodule CosmoWeb.PropertyController do
   use CosmoWeb, :controller
 
   alias Cosmo.Datasets
-  alias Cosmo.Datasets.Property
+  alias Cosmo.Datasets.Schemas.Property
   alias Cosmo.Query
 
   def index(conn, _params) do

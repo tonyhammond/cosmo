@@ -10,6 +10,5 @@ defmodule Cosmo.Repo.Migrations.CreateCities do
 
       timestamps()
     end
-
   end
 end

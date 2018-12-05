@@ -10,19 +10,22 @@ use Mix.Config
 config :cosmo,
   ecto_repos: [Cosmo.Repo]
 
-config :cosmo,
-  max_city_index: 3228
-config :cosmo,
-  max_city_fields: 4
-config :cosmo,
-  data_points: 12912
+config :cosmo, Cosmo.Import.City,
+  city_dataset_source: "https://github.com/plotly/datasets/blob/master/2014_us_cities.csv",
+  max_city_index: 3228,
+  max_city_fields: 4,
+  max_city_data_points: 12912
+
+config :cosmo, Cosmo.Import.Property,
+  property_dataset_source: "https://data.cityofnewyork.us/api/views/ikqj-pyhc/rows.csv",
+  max_property_index: 1165,
+  max_property_fields: 46,
+  max_property_data_points: 53590
 
 config :cosmo,
-  max_property_index: 1165
-config :cosmo,
-  max_property_fields: 46
-config :cosmo,
-  data_points: 53590
+  banner_image: "aerial-urban-skyline-black-white-82952601.jpg",
+  banner_image_source:
+    "https://thumbs.dreamstime.com/b/aerial-urban-skyline-black-white-82952601.jpg"
 
 # Configures the endpoint
 config :cosmo, CosmoWeb.Endpoint,

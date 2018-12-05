@@ -67,7 +67,7 @@ defmodule CosmoWeb.CityController do
   ##
 
   # @max_index 3228
-  @max_index Application.get_env(:cosmo, :max_city_index)
+  @max_index Application.get_env(:cosmo, Cosmo.Import.City)[:max_city_index]
 
   # q = from c in City, select: count(c.id, :distinct)
   # max_index = Repo.one(q)
@@ -77,11 +77,13 @@ defmodule CosmoWeb.CityController do
   def query(conn, %{"id" => id}) do
     # require IEx; IEx.pry()
     case Integer.parse(id) do
-      {_, ""} -> _query_id(conn, String.to_integer(id))
-       _ ->
-         conn
-         |> put_flash(:error, "! Error: Not valid ID for city (\"#{id}\")")
-         |> render("query_city.html")
+      {_, ""} ->
+        _query_id(conn, String.to_integer(id))
+
+      _ ->
+        conn
+        |> put_flash(:error, "! Error: Not valid ID for city (\"#{id}\")")
+        |> render("query_city.html")
     end
   end
 
@@ -90,7 +92,7 @@ defmodule CosmoWeb.CityController do
   end
 
   def query(conn, _) do
-     conn |> render("query_city.html")
+    conn |> render("query_city.html")
   end
 
   def random(conn, _params) do
@@ -102,7 +104,6 @@ defmodule CosmoWeb.CityController do
   #   query(conn, %{"id" => id})
   # end
 
-
   # private functions
 
   defp _query_id(conn, id) when id <= 0 or id > @max_index do
@@ -113,6 +114,7 @@ defmodule CosmoWeb.CityController do
 
   defp _query_id(conn, id) when id > 0 do
     cities = Query.City.by_id(id)
+
     conn
     |> assign(:cities, cities)
     |> render("query_city.html")
@@ -126,18 +128,21 @@ defmodule CosmoWeb.CityController do
     # end
     cities = Query.City.by_nam(nam)
     matches = length(cities)
+
     conn =
       cond do
-        (matches > 1) ->
+        matches > 1 ->
           put_flash(conn, :info, "Found #{matches} matches")
-        (matches == 0) ->
+
+        matches == 0 ->
           put_flash(conn, :error, "! Error: Found #{matches} matches")
-        (matches == 1) ->
+
+        matches == 1 ->
           conn
       end
+
     conn
     |> assign(:cities, cities)
     |> render("query_city.html")
   end
-
 end

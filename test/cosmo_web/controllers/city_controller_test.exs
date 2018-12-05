@@ -75,6 +75,7 @@ defmodule CosmoWeb.CityControllerTest do
     test "deletes chosen city", %{conn: conn, city: city} do
       conn = delete(conn, Routes.city_path(conn, :delete, city))
       assert redirected_to(conn) == Routes.city_path(conn, :index)
+
       assert_error_sent 404, fn ->
         get(conn, Routes.city_path(conn, :show, city))
       end

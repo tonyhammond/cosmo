@@ -1,4 +1,4 @@
-defmodule Cosmo.Import.City do
+defmodule Cosmo.Datasets.Import.City do
   @moduledoc """
   Imports CSV data from priv/csv/cities.csv
 
@@ -8,7 +8,7 @@ defmodule Cosmo.Import.City do
   """
 
   alias Cosmo.Repo
-  alias Cosmo.Datasets.City
+  alias Cosmo.Datasets.Schemas.City
 
   @cities_file Path.join(Application.app_dir(:cosmo), "priv") <> "/csv/cities.csv"
 
@@ -19,6 +19,7 @@ defmodule Cosmo.Import.City do
       # IO.inspect(row)
       {:ok, [nam, pop, lat, lon]} = row
       city = %City{}
+
       params = %{
         nam: String.trim(nam),
         pop: String.to_integer(String.trim(pop)),

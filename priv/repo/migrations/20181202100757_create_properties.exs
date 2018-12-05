@@ -52,6 +52,5 @@ defmodule Cosmo.Repo.Migrations.CreateProperties do
 
       timestamps()
     end
-
   end
 end

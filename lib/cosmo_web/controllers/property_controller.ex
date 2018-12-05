@@ -64,7 +64,7 @@ defmodule CosmoWeb.PropertyController do
   ##
 
   # @max_index 3228
-  @max_index Application.get_env(:cosmo, :max_property_index)
+  @max_index Application.get_env(:cosmo, Cosmo.Import.Property)[:max_property_index]
 
   # q = from c in City, select: count(c.id, :distinct)
   # max_index = Repo.one(q)
@@ -74,11 +74,13 @@ defmodule CosmoWeb.PropertyController do
   def query(conn, %{"id" => id}) do
     # require IEx; IEx.pry()
     case Integer.parse(id) do
-      {_, ""} -> _query_id(conn, String.to_integer(id))
-       _ ->
-         conn
-         |> put_flash(:error, "! Error: Not valid ID for city (\"#{id}\")")
-         |> render("query_property.html")
+      {_, ""} ->
+        _query_id(conn, String.to_integer(id))
+
+      _ ->
+        conn
+        |> put_flash(:error, "! Error: Not valid ID for city (\"#{id}\")")
+        |> render("query_property.html")
     end
   end
 
@@ -103,7 +105,7 @@ defmodule CosmoWeb.PropertyController do
   end
 
   def query(conn, _) do
-     conn |> render("query_property.html")
+    conn |> render("query_property.html")
   end
 
   def random(conn, _params) do
@@ -115,7 +117,6 @@ defmodule CosmoWeb.PropertyController do
   #   query(conn, %{"id" => id})
   # end
 
-
   # private functions
 
   defp _query_id(conn, id) when id <= 0 or id > @max_index do
@@ -126,6 +127,7 @@ defmodule CosmoWeb.PropertyController do
 
   defp _query_id(conn, id) when id > 0 do
     properties = Query.Property.by_id(id)
+
     conn
     |> assign(:properties, properties)
     |> render("query_property.html")
@@ -134,15 +136,19 @@ defmodule CosmoWeb.PropertyController do
   defp _query_addr(conn, nam) do
     properties = Query.Property.by_addr(nam)
     matches = length(properties)
+
     conn =
       cond do
-        (matches > 1) ->
+        matches > 1 ->
           put_flash(conn, :info, "Found #{matches} matches")
-        (matches == 0) ->
+
+        matches == 0 ->
           put_flash(conn, :error, "! Error: Found #{matches} matches")
-        (matches == 1) ->
+
+        matches == 1 ->
           conn
       end
+
     conn
     |> assign(:properties, properties)
     |> render("query_property.html")
@@ -151,26 +157,30 @@ defmodule CosmoWeb.PropertyController do
   defp _query_distr(conn, nam) do
     properties = Query.Property.by_distr(nam)
     matches = length(properties)
+
     conn =
       cond do
-        (matches > 1) ->
+        matches > 1 ->
           put_flash(conn, :info, "Found #{matches} matches")
-        (matches == 0) ->
+
+        matches == 0 ->
           put_flash(conn, :error, "! Error: Found #{matches} matches")
-        (matches == 1) ->
+
+        matches == 1 ->
           conn
       end
+
     conn
     |> assign(:properties, properties)
     |> render("query_property.html")
   end
 
-  # defp _query_year(conn, year) when id > 0 do
-    defp _query_year(conn, year) do
+  #  defp _query_year(conn, year) when id > 0 do
+  defp _query_year(conn, year) do
     properties = Query.Property.by_year(year)
+
     conn
     |> assign(:properties, properties)
     |> render("query_property.html")
   end
-
 end

@@ -1,7 +1,6 @@
-defmodule Cosmo.Datasets.City do
+defmodule Cosmo.Datasets.Schemas.City do
   use Ecto.Schema
   import Ecto.Changeset
-
 
   schema "cities" do
     field :lat, :float

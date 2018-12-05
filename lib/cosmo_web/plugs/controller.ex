@@ -7,5 +7,4 @@ defmodule CosmoWeb.Plugs.Controller do
     conn
     |> assign(:controller_module, Phoenix.Controller.controller_module(conn))
   end
-
 end

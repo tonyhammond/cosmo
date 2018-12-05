@@ -10,13 +10,13 @@ use Mix.Config
 config :cosmo,
   ecto_repos: [Cosmo.Repo]
 
-config :cosmo, Cosmo.Import.City,
+config :cosmo, Cosmo.Datasets.Import.City,
   city_dataset_source: "https://github.com/plotly/datasets/blob/master/2014_us_cities.csv",
   max_city_index: 3228,
   max_city_fields: 4,
   max_city_data_points: 12912
 
-config :cosmo, Cosmo.Import.Property,
+config :cosmo, Cosmo.Datasets.Import.Property,
   property_dataset_source: "https://data.cityofnewyork.us/api/views/ikqj-pyhc/rows.csv",
   max_property_index: 1165,
   max_property_fields: 46,

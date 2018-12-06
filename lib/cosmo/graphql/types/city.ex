@@ -1,11 +1,15 @@
 defmodule Cosmo.Graphql.Types.City do
   use Absinthe.Schema.Notation
 
+  @desc """
+  The `City` object type represents a record from the US cities database.
+  """
   object :city do
-    field :id, non_null(:id)
-    field :nam, non_null(:string)
-    field :pop, non_null(:integer)
-    field :lat, non_null(:float)
-    field :lon, non_null(:float)
+    field :id, :id
+    #
+    field :nam, :string
+    field :pop, :integer
+    field :lat, :float
+    field :lon, :float
   end
 end

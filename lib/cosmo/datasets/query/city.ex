@@ -1,4 +1,4 @@
-defmodule Cosmo.Query.City do
+defmodule Cosmo.Datasets.Query.City do
   import Ecto.Query
 
   alias Cosmo.{Datasets.Schemas.City, Repo}
@@ -7,9 +7,10 @@ defmodule Cosmo.Query.City do
     q =
       from c in City,
         where: c.id == ^id,
-        order_by: c.id
+        order_by: c.id,
+        limit: 1
 
-    Repo.all(q)
+    Repo.one(q)
   end
 
   def by_nam(nam) do

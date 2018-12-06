@@ -1,9 +1,15 @@
 defmodule CosmoWeb.PropertyController do
+  @moduledoc """
+  Controller actions for property_path routes.
+  """
+
   use CosmoWeb, :controller
 
   alias Cosmo.Datasets
   alias Cosmo.Datasets.Schemas.Property
   alias Cosmo.Query
+
+  plug CosmoWeb.Plugs.Controller
 
   def index(conn, _params) do
     properties = Datasets.list_properties()
@@ -112,10 +118,6 @@ defmodule CosmoWeb.PropertyController do
     id = Integer.to_string(Enum.random(1..@max_index))
     query(conn, %{"id" => id})
   end
-
-  # def show(conn, %{"id" => id}) do
-  #   query(conn, %{"id" => id})
-  # end
 
   # private functions
 

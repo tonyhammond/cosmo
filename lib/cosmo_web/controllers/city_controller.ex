@@ -1,11 +1,14 @@
 defmodule CosmoWeb.CityController do
+  @moduledoc """
+  Controller actions for city_path routes.
+  """
+
   use CosmoWeb, :controller
 
   alias Cosmo.Datasets
   alias Cosmo.Datasets.Schemas.City
-  alias Cosmo.Query
+  alias Cosmo.Datasets.Query
 
-  import CosmoWeb.Plugs.Controller
   plug CosmoWeb.Plugs.Controller
 
   def index(conn, _params) do
@@ -99,10 +102,6 @@ defmodule CosmoWeb.CityController do
     id = Integer.to_string(Enum.random(1..@max_index))
     query(conn, %{"id" => id})
   end
-
-  # def show(conn, %{"id" => id}) do
-  #   query(conn, %{"id" => id})
-  # end
 
   # private functions
 

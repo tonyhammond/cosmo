@@ -4,20 +4,27 @@ defmodule Cosmo.Graphql do
   alias CosmoWeb.Resolvers.CityResolver
   alias CosmoWeb.Resolvers.PropertyResolver
 
-  import_types(Cosmo.Graphql.Types.City)
   import_types(Cosmo.Graphql.Types.Property)
+  import_types(Cosmo.Graphql.Types.City)
 
   query do
     @desc "List all cities"
     field :cities, non_null(list_of(non_null(:city))) do
-      resolve(&CityResolver.cities/3)
+      arg(:nam, non_null(:string))
+      resolve(&CityResolver.get_cities/3)
     end
 
-    @desc "Get a city"
+    @desc "Get a city (by ID)"
     field :city, :city do
       arg(:id, non_null(:id))
       resolve(&CityResolver.get_city/3)
     end
+
+    # @desc "Get a city (by name)"
+    # field :city, list_of(:city) do
+    #   arg(:nam, non_null(:string))
+    #   resolve(&CityResolver.get_city/3)
+    # end
 
     @desc "List all properties"
     field :properties, non_null(list_of(non_null(:property))) do

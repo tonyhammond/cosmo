@@ -1,8 +1,11 @@
 defmodule Cosmo.Graphql.Types.Property do
   use Absinthe.Schema.Notation
 
+  @desc """
+  The `Property` object type represents a record from the NYC condominium database.
+  """
   object :property do
-    field :id, non_null(:id)
+    field :id, :id
     #
     field :bbl, :integer
     field :bin, :integer

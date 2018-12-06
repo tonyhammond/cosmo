@@ -22,7 +22,7 @@
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
       <%= render @view_module, @view_template, assigns %>
-      <%= if debug do %>
+      <%= if debug() do %>
       <p>DEBUG</p>
       <p>dbg&gt; <%= @controller_module %></p>
       <p>dbg&gt; <%= @view_module %></p>

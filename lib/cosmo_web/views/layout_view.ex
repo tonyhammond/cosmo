@@ -1,5 +1,5 @@
 defmodule CosmoWeb.LayoutView do
   use CosmoWeb, :view
 
-  def debug(), do: false
+  def debug(), do: true
 end

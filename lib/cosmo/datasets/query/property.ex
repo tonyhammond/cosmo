@@ -1,4 +1,4 @@
-defmodule Cosmo.Query.Property do
+defmodule Cosmo.Datasets.Query.Property do
   import Ecto.Query
 
   alias Cosmo.{Datasets.Schemas.Property, Repo}

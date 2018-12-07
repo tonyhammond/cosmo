@@ -11,25 +11,31 @@ These are exposed through a number of different interfaces:
 
 * Web-based CRUD endpoints (REST)
 * Web-based query endpoint (querystring)
-* GraphQL interface
+* GraphQL endpoint
 
-## Query: List cities
-![graphiql_list_cities.png](./priv/static/images/graphiql_list_cities.png)
+## Query: Type City
+![__tyoe_city.graphql.png](./priv/static/images/graphiql/__type_city.graphql.png)
 
-## Query: Get city
-![graphiql_get_city.png](./priv/static/images/graphiql_get_city.png)
+## Query: List Cities
+![list_cities.graphql.png](./priv/static/images/graphiql/list_cities.graphql.png)
 
-## Mutation: Create city
-![graphiql_create_city.png](./priv/static/images/graphiql_create_city.png)
+## Query: Var List Cities
+![var_list_cities.graphql.png](./priv/static/images/graphiql/var_list_cities.graphql.png)
 
-## Query: List properties
-![graphiql_list_properties.png](./priv/static/images/graphiql_list_properties.png)
+## Query: Get City
+![get_city.graphql.png](./priv/static/images/graphiql/get_city.graphql.png)
 
-## Query: List properties (abbr.)
-![graphiql_list_properties_abbr.png](./priv/static/images/graphiql_list_properties_abbr.png)
+## Mutation: Create City
+![create_city.graphql.png](./priv/static/images/graphiql/create_city.graphql.png)
 
-## Query: Get property
-![graphiql_get_property.png](./priv/static/images/graphiql_get_property.png)
+## Query: Type Property
+![__tyoe_property.graphql.png](./priv/static/images/graphiql/__type_property.graphql.png)
 
-## Query: Get property (abbr.)
-![graphiql_get_property_abbr.png](./priv/static/images/graphiql_get_property_abbr.png)
+## Query: List Properties
+![list_properties.graphql.png](./priv/static/images/graphiql/list_properties.graphql.png)
+
+## Query: Var List Properties
+![var_list_properties.graphql.png](./priv/static/images/graphiql/var_list_properties.graphql.png)
+
+## Query: Get Property
+![get_property.graphql.png](./priv/static/images/graphiql/get_property.graphql.png)

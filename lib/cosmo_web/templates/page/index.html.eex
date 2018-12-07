@@ -3,12 +3,12 @@
   <%= gettext "Welcome to %{name}!", name: "Cosmo" %>
   </h1>
   <p>
-    A demo project to explore Elixir
+    A demo project to explore
+    <a href="https://elixir-lang.org/">#ElixirLang</a>'s
     <a href="https://hexdocs.pm/phoenix/overview.html">Phoenix</a> /
     <a href="https://hexdocs.pm/ecto/Ecto.html">Ecto</a> /
     <a href="https://hexdocs.pm/absinthe/overview.html">Absinthe</a>
-    using a couple of separate
-    unrelated datasets:
+    using a couple of separate, unrelated datasets:
     <span><%= link "Cities", to: Routes.city_path(@conn, :index) %></span>
     and
     <span><%= link "Properties", to: Routes.property_path(@conn, :index) %></span>

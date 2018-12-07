@@ -1,0 +1,11 @@
+query varListCities($flag: Boolean!) {
+  cities(name: "fort") {
+    id
+    name
+    population
+    ...@include(if: $flag) {
+      latitude
+      longitude
+    }
+  }
+}

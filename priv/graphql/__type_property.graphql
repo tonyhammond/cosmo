@@ -1,0 +1,12 @@
+query __typeProperty {
+  __type(name: "Property") {
+    name
+    fields {
+      name
+      description
+      type {
+        name
+      }
+     }
+  }
+}

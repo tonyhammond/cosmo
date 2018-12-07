@@ -1,0 +1,9 @@
+query listCities {
+  cities(name: "") {
+    id
+    name
+    population
+    latitude
+    longitude
+  }
+}

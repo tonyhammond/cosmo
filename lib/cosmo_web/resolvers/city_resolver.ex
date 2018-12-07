@@ -22,8 +22,8 @@ defmodule CosmoWeb.Resolvers.CityResolver do
     end
   end
 
-  def get_cities(_parent, %{nam: name}, _resolution) do
-    case City.by_nam(name) do
+  def get_cities(_parent, %{name: name}, _resolution) do
+    case City.by_name(name) do
       nil ->
         {:error, "City name #{name} not found"}
 

@@ -1,5 +1,5 @@
-{
-  properties {
+query getProperty {
+  property(id: 78) {
     id
     #
     bbl

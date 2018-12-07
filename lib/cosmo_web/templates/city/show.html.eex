@@ -9,22 +9,22 @@
 
   <li>
     <strong>Name:</strong>
-    <%= @city.nam %>
+    <%= @city.name %>
   </li>
 
   <li>
     <strong>Population:</strong>
-    <%= Number.Delimit.number_to_delimited(@city.pop) %>
+    <%= Number.Delimit.number_to_delimited(@city.population) %>
   </li>
 
   <li>
     <strong>Latitude:</strong>
-    <%= @city.lat %>
+    <%= @city.latitude %>
   </li>
 
   <li>
     <strong>Longitude:</strong>
-    <%= @city.lon %>
+    <%= @city.longitude %>
   </li>
 
 </ul>

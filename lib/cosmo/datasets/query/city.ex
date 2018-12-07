@@ -13,10 +13,10 @@ defmodule Cosmo.Datasets.Query.City do
     Repo.one(q)
   end
 
-  def by_nam(nam) do
+  def by_name(name) do
     q =
       from c in City,
-        where: ilike(c.nam, ^"%#{nam}%"),
+        where: ilike(c.name, ^"%#{name}%"),
         order_by: c.id
 
     Repo.all(q)

@@ -1,0 +1,9 @@
+query getCity {
+  city(id: 78) {
+    id
+    name
+    population
+    latitude
+    longitude
+  }
+}

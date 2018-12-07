@@ -1,0 +1,12 @@
+query __typeCity {
+  __type(name: "City") {
+    name
+    fields {
+      name
+      description
+      type {
+        name
+      }
+     }
+  }
+}

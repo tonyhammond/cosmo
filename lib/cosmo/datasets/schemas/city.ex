@@ -3,10 +3,10 @@ defmodule Cosmo.Datasets.Schemas.City do
   import Ecto.Changeset
 
   schema "cities" do
-    field :lat, :float
-    field :lon, :float
-    field :nam, :string
-    field :pop, :integer
+    field :latitude, :float
+    field :longitude, :float
+    field :name, :string
+    field :population, :integer
 
     timestamps()
   end
@@ -14,7 +14,7 @@ defmodule Cosmo.Datasets.Schemas.City do
   @doc false
   def changeset(city, attrs) do
     city
-    |> cast(attrs, [:nam, :pop, :lat, :lon])
-    |> validate_required([:nam, :pop, :lat, :lon])
+    |> cast(attrs, [:name, :population, :latitude, :longitude])
+    |> validate_required([:name, :population, :latitude, :longitude])
   end
 end

@@ -10,7 +10,7 @@ defmodule Cosmo.Graphql do
   query do
     @desc "List all cities"
     field :cities, non_null(list_of(non_null(:city))) do
-      arg(:nam, non_null(:string))
+      arg(:name, non_null(:string))
       resolve(&CityResolver.get_cities/3)
     end
 
@@ -40,10 +40,10 @@ defmodule Cosmo.Graphql do
 
   mutation do
     field :create_city, :city do
-      arg(:lat, non_null(:float))
-      arg(:lon, non_null(:float))
-      arg(:nam, non_null(:string))
-      arg(:pop, non_null(:integer))
+      arg(:latitude, non_null(:float))
+      arg(:longitude, non_null(:float))
+      arg(:name, non_null(:string))
+      arg(:population, non_null(:integer))
 
       resolve(&CityResolver.create_city/3)
     end

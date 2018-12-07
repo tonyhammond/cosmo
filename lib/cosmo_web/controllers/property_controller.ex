@@ -7,7 +7,7 @@ defmodule CosmoWeb.PropertyController do
 
   alias Cosmo.Datasets
   alias Cosmo.Datasets.Schemas.Property
-  alias Cosmo.Query
+  alias Cosmo.Datasets.Query
 
   plug CosmoWeb.Plugs.Controller
 

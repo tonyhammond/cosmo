@@ -23,10 +23,10 @@
 <%= for city <- @cities do %>
     <tr>
       <td>  <%= link city.id, to: Routes.city_path(@conn, :show, city) %></td>
-      <td><%= city.nam %></td>
-      <td><%= Number.Delimit.number_to_delimited(city.pop) %></td>
-      <td><%= city.lat %></td>
-      <td><%= city.lon %></td>
+      <td><%= city.name %></td>
+      <td><%= Number.Delimit.number_to_delimited(city.population) %></td>
+      <td><%= city.latitude %></td>
+      <td><%= city.longitude %></td>
 
       <td>
 

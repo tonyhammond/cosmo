@@ -1,4 +1,4 @@
-{
+query getPropertyAbbr {
   property(id: 78) {
     id
     #

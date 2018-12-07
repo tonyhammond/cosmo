@@ -17,14 +17,14 @@ defmodule Cosmo.Datasets.Import.City do
     |> CSV.decode(separator: ?\,, headers: false)
     |> Enum.map(fn row ->
       # IO.inspect(row)
-      {:ok, [nam, pop, lat, lon]} = row
+      {:ok, [name, population, latitude, longitude]} = row
       city = %City{}
 
       params = %{
-        nam: String.trim(nam),
-        pop: String.to_integer(String.trim(pop)),
-        lat: String.to_float(String.trim(lat)),
-        lon: String.to_float(String.trim(lon))
+        name: String.trim(name),
+        population: String.to_integer(String.trim(population)),
+        latitude: String.to_float(String.trim(latitude)),
+        longitude: String.to_float(String.trim(longitude))
       }
 
       changeset = City.changeset(city, params)

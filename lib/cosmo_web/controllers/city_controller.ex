@@ -69,8 +69,8 @@ defmodule CosmoWeb.CityController do
 
   ##
 
-  # @max_index 3228
-  @max_index Application.get_env(:cosmo, Cosmo.Import.City)[:max_city_index]
+  # @max_index 3228
+  @max_index Application.get_env(:cosmo, Cosmo.Datasets.Import.City)[:max_city_index]
 
   # q = from c in City, select: count(c.id, :distinct)
   # max_index = Repo.one(q)
@@ -90,8 +90,8 @@ defmodule CosmoWeb.CityController do
     end
   end
 
-  def query(conn, %{"name" => nam}) do
-    _query_nam(conn, nam)
+  def query(conn, %{"name" => name}) do
+    _query_name(conn, name)
   end
 
   def query(conn, _) do
@@ -119,13 +119,13 @@ defmodule CosmoWeb.CityController do
     |> render("query_city.html")
   end
 
-  defp _query_nam(conn, nam) do
+  defp _query_name(conn, name) do
     # cities = []
     # cities = cities ++
-    # for n <- String.split(nam, "|") do
-    #   Query.by_nam(n)
+    # for n <- String.split(name, "|") do
+    #   Query.by_name(n)
     # end
-    cities = Query.City.by_nam(nam)
+    cities = Query.City.by_name(name)
     matches = length(cities)
 
     conn =

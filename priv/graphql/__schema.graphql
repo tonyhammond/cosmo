@@ -1,4 +1,4 @@
-query IntrospectionQuery {
+query __schemaQuery {
     __schema {
       queryType { name }
       mutationType { name }

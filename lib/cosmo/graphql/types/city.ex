@@ -7,9 +7,9 @@ defmodule Cosmo.Graphql.Types.City do
   object :city do
     field :id, :id
     #
-    field :nam, :string
-    field :pop, :integer
-    field :lat, :float
-    field :lon, :float
+    field :name, :string, description: "The name of the city"
+    field :population, :integer, description: "The population of the city"
+    field :latitude, :float, description: "The latitude of the city"
+    field :longitude, :float, description: "The longitude of the city"
   end
 end

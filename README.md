@@ -1,4 +1,4 @@
-# Cosmo – Exploring Elixir's Phoenix / Ecto / Absinthe
+# Cosmo – Exploring Elixir's Phoenix / Ecto / Absinthe frameworks
 
 ![cosmo_homepage_banner.jpg](./priv/static/images/cosmo_homepage_banner.jpg)
 

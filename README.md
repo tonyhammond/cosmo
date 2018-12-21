@@ -1,4 +1,4 @@
-# Cosmo – A demo project to explore ElixirLang's Phoenix / Ecto / Absinthe
+# Cosmo – Exploring ElixirLang's Phoenix / Ecto / Absinthe
 
 ![cosmo_homepage_banner.jpg](./priv/static/images/cosmo_homepage_banner.jpg)
 
